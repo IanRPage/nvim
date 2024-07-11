@@ -32,6 +32,7 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Have packer manage itself	
     use 'neovim/nvim-lspconfig'
     use "hrsh7th/nvim-cmp"
+    use 'simrat39/rust-tools.nvim'
     use({
 	-- cmp LSP completion
 	"hrsh7th/cmp-nvim-lsp",
@@ -44,7 +45,9 @@ return packer.startup(function(use)
 	requires = { "hrsh7th/nvim-cmp" },
     })
 
-use("simrat39/rust-tools.nvim")
+    --- Debugging ---
+    use 'nvim-lua/plenary.nvim'
+    use 'mfussenegger/nvim-dap'
 
     if PACKER_BOOTSTRAP then
 	require("packer").sync()
