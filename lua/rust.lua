@@ -23,7 +23,7 @@ local opts = {
     },
     inlay_hints = {
       auto = true,
-      show_parameter_hints = false,
+      show_parameter_hints = true,
       parameter_hints_prefix = "",
       other_hints_prefix = "",
     },
@@ -57,7 +57,8 @@ cmp.setup({
   preselect = cmp.PreselectMode.None,
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      -- vim.fn["vsnip#anonymous"](args.body) -- if using vsnip as the snippet plugin
+      vim.snippet.expand(args.body) -- if using native Neovim snippets (v0.10+)
     end,
   },
   mapping = {
@@ -79,7 +80,7 @@ cmp.setup({
   -- Installed sources
   sources = {
     { name = "nvim_lsp" },
-    { name = "vsnip" },
+    -- { name = "vsnip" }, -- not using vsnip for "snippet engine"
     { name = "path" },
     { name = "buffer" },
   },

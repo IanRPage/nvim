@@ -1,6 +1,7 @@
 require("settings")
 require("plugins")
 require("rust")
+require("telescope")
 
 
 if vim.g.vscode then
