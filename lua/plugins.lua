@@ -33,10 +33,12 @@ packer.init({
 return packer.startup(function(use)
 
     use "wbthomason/packer.nvim" -- load packer.nvim
+
     use {
       'nvim-telescope/telescope.nvim', branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use "kylechui/nvim-surround"
 
     use 'neovim/nvim-lspconfig' -- native LSP support
     use "hrsh7th/nvim-cmp"
