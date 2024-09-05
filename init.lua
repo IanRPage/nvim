@@ -1,6 +1,5 @@
 require("settings")
 require("plugins")
-require("rust")
 require("telescope")
 
 
