@@ -8,8 +8,6 @@ return {
     config = function()
 	local lsp_zero = require("lsp-zero")
 
-        -- lsp_attach is where you enable features that only work
-        -- if there is a language server active in the file
 	local lsp_attach = function(client, buffer)
 	    lsp_zero.default_keymaps { buffer = bufnr }
 	    vim.keymap.set({"n", "x"}, "<A-F>", function()
@@ -28,8 +26,7 @@ return {
 	    capabilities = require("cmp_nvim_lsp").default_capabilities()
 	}
 
-        -- These are just examples. Replace them with the language
-        -- servers you have installed in your system
+	-- specifying which language servers are implemented/setup
         require("lspconfig").pylsp.setup {}
         require("lspconfig").ruff.setup {}
         require("lspconfig").rust_analyzer.setup {}
