@@ -7,7 +7,9 @@ return {
     },
     config = function()
 	local cmp = require("cmp")
+	
 	-- require('luasnip.loaders.from_vscode').lazy_load() -- need to add to use luasnip
+
 	cmp.setup {
 	    preselect = cmp.PreselectMode.None,
 	    snippet = {
@@ -38,8 +40,12 @@ return {
 		-- { name = "luasnip" }, -- need it for luasnip
 	    },
 	    window = {
-	        completion = cmp.config.window.bordered(),
-	        documentation = cmp.config.window.bordered(),
+	        completion = cmp.config.window.bordered({
+		    winhighlight = "Normal:Pmenu,FloatBorder:None,CursorLine:PmenuSel,Search:None"
+		}),
+	        documentation = cmp.config.window.bordered({
+		    winhighlight = "Normal:None,FloatBorder:None,CursorLine:PmenuSel,Search:None"
+		}),
 	    },
 	}
     end,
