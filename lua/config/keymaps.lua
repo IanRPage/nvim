@@ -1,0 +1,5 @@
+-- Trying to figure out how to navigate between windows using Ctrl + hjkl
+-- vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>", {silent = true, buffer = 0})
+-- vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>", {silent = true, buffer = 0})
+-- vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>", {silent = true, buffer = 0})
+-- vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>", {silent = true, buffer = 0})
