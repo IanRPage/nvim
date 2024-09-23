@@ -14,7 +14,6 @@ return {
 	    vim.keymap.set({"t", "n"}, "<C-j>", [[<cmd>wincmd j<CR>]], opts)
 	    vim.keymap.set({"t", "n"}, "<C-k>", [[<cmd>wincmd k<CR>]], opts)
 	    vim.keymap.set({"t", "n"}, "<C-l>", [[<cmd>wincmd l<CR>]], opts)
-	    -- vim.keymap.set({"t", "n"}, "<C-w>", [[<C-\><C-n><C-w>]], opts)
 	end,
     },
 }
