@@ -23,15 +23,16 @@ return {
 		    },
 		    include_surrounding_whitespace = true,
 		},
-		swap = {
-		    enable = true,
-		    swap_next = {
-			["<leader>a"] = "@parameter.inner",
-		    },
-		    swap_previous = {
-			["<leader>A"] = "@parameter.inner",
-		    },
-		},
+		-- -- I will uncomment this when I start to actually use swapping
+		-- swap = {
+		--     enable = true,
+		--     swap_next = {
+		-- 	["<leader>a"] = "@parameter.inner",
+		--     },
+		--     swap_previous = {
+		-- 	["<leader>A"] = "@parameter.inner",
+		--     },
+		-- },
 		move = {
 		    enable = true,
 		    set_jumps = true, -- whether to set jumps in the jumplist

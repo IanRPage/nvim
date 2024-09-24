@@ -6,6 +6,7 @@ vim.o.shiftwidth = 4
 vim.o.smartindent = true
 vim.o.softtabstop = 4
 vim.o.termguicolors = true -- nvim terminal adjusts to my normal terminal color scheme, but it then changes my nvim editor color scheme as well. I don't want to change editor scheme.
+vim.o.hlsearch = true
 vim.cmd([[
 let schemes = ["my-darkblue", "my-zaibatsu", "cockatoo"]
 let seed = srand()
