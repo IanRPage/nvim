@@ -10,9 +10,10 @@ return {
 
 	local lsp_attach = function(client, buffer)
 	    lsp_zero.default_keymaps { buffer = bufnr }
-	    vim.keymap.set({"n", "x"}, "<A-F>", function()
-		vim.lsp.buf.format({async = false, timeout_ms = 10000})
-	    end, opts)
+
+	    -- lsp custom keymaps
+	    vim.keymap.set({"n", "x"}, "<A-F>", "<cmd>LspZeroFormat<CR>", opts)
+	    vim.keymap.set("n", "ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	end
 
 	lsp_zero.extend_lspconfig {
