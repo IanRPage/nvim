@@ -13,7 +13,8 @@ return {
 		"python",
 		"c",
 		"cpp",
-		"lua"
+		"lua",
+		"comment"
 	    },
 	    incremental_selection = {
 		enable = true,
@@ -24,6 +25,9 @@ return {
 		    node_decremental = "<bs>",
 		},
 	    },
+	    highlight = {
+		enable = true,
+	    }
 	}
     end,
 }
