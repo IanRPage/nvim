@@ -18,6 +18,10 @@ return {
 		    -- require('luasnip').lsp_expand(args.body) -- might use luasnip down the line
 		end,
 	    },
+	    completion = {
+		keyword_length = 2,
+		max_item_count = 10,
+	    },
 	    mapping = {
 		["<C-p>"] = cmp.mapping.select_prev_item(),
 		["<C-n>"] = cmp.mapping.select_next_item(),
@@ -36,7 +40,7 @@ return {
 	    sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-		{ name = "buffer" },
+		{ name = "buffer", max_item_count = 2,  },
 		-- { name = "luasnip" }, -- need it for luasnip
 	    },
 	    window = {
