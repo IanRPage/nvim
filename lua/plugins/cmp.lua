@@ -2,7 +2,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = { 
 	"hrsh7th/cmp-path", -- cmp path completion
-	"hrsh7th/cmp-buffer", -- cmp in buffer suggestion completions
+	-- "hrsh7th/cmp-buffer", -- cmp in buffer suggestion completions
 	-- "L3MON4D3/LuaSnip", -- might want to try out luasnip later
     },
     config = function()
@@ -18,10 +18,10 @@ return {
 		    -- require('luasnip').lsp_expand(args.body) -- might use luasnip down the line
 		end,
 	    },
-	    completion = {
-		keyword_length = 2,
-		max_item_count = 10,
-	    },
+	    -- completion = { -- any constraints I want to add to cmp menu
+		-- keyword_length = 2,
+		-- max_item_count = 10,
+	    -- },
 	    mapping = {
 		["<C-p>"] = cmp.mapping.select_prev_item(),
 		["<C-n>"] = cmp.mapping.select_next_item(),
@@ -40,7 +40,7 @@ return {
 	    sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-		{ name = "buffer", max_item_count = 2,  },
+		-- { name = "buffer", max_item_count = 2,  }, -- kind of annoying
 		-- { name = "luasnip" }, -- need it for luasnip
 	    },
 	    window = {
