@@ -15,7 +15,7 @@ vim.o.textwidth = 100
 
 
 -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo
-local schemes = {"my-zaibatsu", "cockatoo"}
+local schemes = {"cockatoo"}
 math.randomseed(os.time())
 local selected_scheme = schemes[math.random(#schemes)]
 vim.cmd("colorscheme " .. selected_scheme)
