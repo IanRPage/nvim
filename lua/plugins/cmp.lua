@@ -1,5 +1,7 @@
 return {
     "hrsh7th/nvim-cmp",
+    lazy = true,
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = { 
 	"hrsh7th/cmp-path", -- cmp path completion
 	-- "hrsh7th/cmp-buffer", -- cmp in buffer suggestion completions
