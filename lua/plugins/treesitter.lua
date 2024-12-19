@@ -16,7 +16,8 @@ return {
 		"c",
 		"cpp",
 		"lua",
-		"comment"
+		"comment",
+		"vimdoc",
 	    },
 	    incremental_selection = {
 		enable = true,

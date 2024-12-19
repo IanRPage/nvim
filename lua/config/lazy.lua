@@ -30,6 +30,7 @@ require("lazy").setup({
         -- import plugins inside "plugins/" directory
         { import = "plugins" },
 	{ import = "plugins.lsp" },
+	{ import = "plugins.dap" },
     },
 
     -- automatically check for plugin updates
