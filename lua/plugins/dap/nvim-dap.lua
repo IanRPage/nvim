@@ -1,24 +1,14 @@
 return {
     "mfussenegger/nvim-dap",
     lazy = true,
-    event = "BufReadPre",
-    dependencies = {
-	{ "mfussenegger/nvim-dap-python", lazy = true, ft = "python" },
+    keys = {
+	{ "<F5>", "<cmd>lua require('dap').continue()<CR>" }, 
+	{ "<F6>", "<cmd>lua require('dap').terminate()<CR>" },
+	{ "<F7>", "<cmd>lua require('dap').restart()<CR>" },
+	{ "<F10>", "<cmd>lua require('dap').step_over()<CR>" },
+	{ "<F11>", "<cmd>lua require('dap').step_into()<CR>" },
+	{ "<F12>", "<cmd>lua require('dap').step_out()<CR>" },
+	{ "<Space>tb", "<cmd>lua require('dap').toggle_breakpoint()<CR>" },
+	{ "<Space>B", "<cmd>lua require('dap').set_breakpoint()<CR>" },
     },
-    config = function()
-	local dap = require("dap")
-
-	-- specific language adapters
-	require("dap-python").setup("uv")
-
-	-- keybindings
-	vim.keymap.set("n", "<F5>", dap.continue)
-	vim.keymap.set("n", "<F6>", dap.terminate)
-	vim.keymap.set("n", "<F7>", dap.restart)
-	vim.keymap.set("n", "<F10>", dap.step_over)
-	vim.keymap.set("n", "<F11>", dap.step_into)
-	vim.keymap.set("n", "<F12>", dap.step_out)
-	vim.keymap.set("n", "<Space>bp", dap.toggle_breakpoint)
-	vim.keymap.set("n", "<Space>B", dap.set_breakpoint)
-    end
 }

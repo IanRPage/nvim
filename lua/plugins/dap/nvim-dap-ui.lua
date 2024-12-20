@@ -1,8 +1,10 @@
 return {
     "rcarriga/nvim-dap-ui",
     lazy = true,
-    event = "BufReadPre",
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    keys = {
+	{ "<F5>" },
+    },
     opts = {
 	layouts = {
 	    {
@@ -24,7 +26,7 @@ return {
 	    }
 	}
     },
-    config = function(_, opts)
+   config = function(_, opts)
 	local dap, dapui = require("dap"), require("dapui")
 
 	dapui.setup(opts)

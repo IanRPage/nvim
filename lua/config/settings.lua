@@ -1,5 +1,5 @@
 -- following equivalent to "set [...]" in init.vim
-vim.o.number = true 
+-- vim.o.number = true 
 vim.o.relativenumber = true 
 vim.o.autoindent = true
 vim.o.shiftwidth = 4
@@ -15,7 +15,9 @@ vim.o.textwidth = 100
 
 
 -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo
-local schemes = {"cockatoo"}
+local schemes = { "cockatoo", "default" }
+
+-- uncomment below to implement random colorscheme from `schemes`
 math.randomseed(os.time())
 local selected_scheme = schemes[math.random(#schemes)]
 vim.cmd("colorscheme " .. selected_scheme)
