@@ -12,13 +12,14 @@ vim.o.hlsearch = true
 vim.o.linebreak = true
 vim.o.showbreak = "↪ "
 vim.o.textwidth = 100
+vim.o.pumheight = 10
+vim.cmd("colorscheme cockatoo")
 
-
--- top colorschemes: my-darkblue, my-zaibatsu, cockatoo
-local schemes = { "cockatoo", "default" }
-
--- uncomment below to implement random colorscheme from `schemes`
-math.randomseed(os.time())
-local selected_scheme = schemes[math.random(#schemes)]
-vim.cmd("colorscheme " .. selected_scheme)
+-- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, default
+-- local schemes = { "cockatoo", "default", "my-darkblue", "my-zaibatsu" }
+--
+-- -- uncomment below to implement random colorscheme from `schemes`
+-- math.randomseed(os.time())
+-- local selected_scheme = schemes[math.random(#schemes)]
+-- vim.cmd("colorscheme " .. selected_scheme)
 

@@ -3,7 +3,7 @@ return {
     cmd = "LspInfo",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-	-- "hrsh7th/cmp-nvim-lsp", -- cmp LSP completion  -- uncomment to enable completion
+	"hrsh7th/cmp-nvim-lsp", -- uncomment to enable completion
     },
     config = function()
 	local lsp_zero = require("lsp-zero")
@@ -31,7 +31,7 @@ return {
 		info = "»",
 	    },
 	    lsp_attach = lsp_attach,
-	    -- capabilities = require("cmp_nvim_lsp").default_capabilities()  -- uncomment to enable completion
+	    capabilities = require("cmp_nvim_lsp").default_capabilities()  -- uncomment to enable completion
 	}
 
 	-- specifying which language servers are implemented/setup
