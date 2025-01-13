@@ -1,9 +1,8 @@
 return {
     "kylechui/nvim-surround",
-    -- cond = true,
-    lazy = true,
+    cond = true,
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = { "BufReadPre", "BufNewFile" },
+    -- event = { "BufReadPre", "BufNewFile" },
     config = function()
 	require("nvim-surround").setup {}
     end

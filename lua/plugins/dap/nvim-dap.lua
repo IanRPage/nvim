@@ -11,4 +11,28 @@ return {
 	{ "<Space>tb", "<cmd>lua require('dap').toggle_breakpoint()<CR>" },
 	{ "<Space>B", "<cmd>lua require('dap').set_breakpoint()<CR>" },
     },
+    config = function()
+	local dap = require('dap')
+
+	dap.adapters.lldb = {
+	    type = 'executable',
+	    command = '/usr/bin/lldb-vscode',  -- Adjust path if necessary
+	    name = "lldb"
+	}
+
+	dap.configurations.rust = {
+	    {
+		name = "Launch",
+		type = "lldb",
+		request = "launch",
+		program = function()
+		    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/target/debug/', 'file')
+		end,
+		cwd = '${workspaceFolder}',
+		stopOnEntry = false,
+		args = {},
+		runInTerminal = false,
+	    },
+	}
+    end,
 }
