@@ -38,5 +38,6 @@ return {
         require("lspconfig").pylsp.setup {}
         require("lspconfig").ruff.setup {}
         require("lspconfig").rust_analyzer.setup {}
+	require("lspconfig").clangd.setup {}
     end,
 }
