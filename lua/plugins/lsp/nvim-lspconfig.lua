@@ -35,7 +35,15 @@ return {
 	}
 
 	-- specifying which language servers are implemented/setup
-        require("lspconfig").pylsp.setup {}
+        require("lspconfig").pylsp.setup {
+	    settings = {
+		clangd = {
+		    format = {
+			style = ".clang-format"
+		    }
+		}
+	    }
+	}
         require("lspconfig").ruff.setup {}
         require("lspconfig").rust_analyzer.setup {}
 	require("lspconfig").clangd.setup {}
