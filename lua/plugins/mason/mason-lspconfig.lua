@@ -11,6 +11,9 @@ return {
 		"rust_analyzer",
 		"clangd",
 		"ruff",
+		"ts_ls",
+		"cssls",
+		"html",
 	    },
 	}
     end
