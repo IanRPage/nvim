@@ -37,5 +37,20 @@ return {
 		client.server_capabilities.documentFormattingProvider = false
 	    end
 	}
+	lsp_config.lua_ls.setup {
+	    settings = {
+		Lua = {
+		    format = {
+			enable = false
+			-- for some reason the below settings don't change how lua language server
+			-- formats code. it does an ugly 2 tab indentation
+			-- defaultConfig = {
+			--     indent_style = "space",
+			--     indent_size = "4",
+			-- }
+		    },
+		},
+	    },
+	}
     end,
 }

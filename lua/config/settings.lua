@@ -22,7 +22,14 @@ vim.cmd("colorscheme cockatoo")
 -- vim.cmd("colorscheme " .. selected_scheme)
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "cpp", "html", "ts", "js", "jsx", "tsx" },
+    pattern = {
+	"cpp",
+	"html",
+	"typescript",
+	"javascript",
+	"typescriptreact",
+	"javascriptreact"
+    },
     callback = function()
 	vim.bo.shiftwidth = 2
 	vim.bo.softtabstop = 2
