@@ -1,5 +1,3 @@
--- following equivalent to "set [...]" in init.vim
-vim.o.number = true 
 vim.o.relativenumber = true 
 vim.o.autoindent = true
 vim.o.shiftwidth = 4
@@ -12,11 +10,23 @@ vim.o.hlsearch = true
 vim.o.linebreak = true
 vim.o.showbreak = "↪ "
 vim.o.textwidth = 100
+vim.o.pumheight = 10
+vim.cmd("colorscheme cockatoo")
 
+-- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, default
+-- local schemes = { "cockatoo", "default", "my-darkblue", "my-zaibatsu" }
+--
+-- -- uncomment below to implement random colorscheme from `schemes`
+-- math.randomseed(os.time())
+-- local selected_scheme = schemes[math.random(#schemes)]
+-- vim.cmd("colorscheme " .. selected_scheme)
 
--- top colorschemes: my-darkblue, my-zaibatsu, cockatoo
-local schemes = {"my-zaibatsu", "cockatoo"}
-math.randomseed(os.time())
-local selected_scheme = schemes[math.random(#schemes)]
-vim.cmd("colorscheme " .. selected_scheme)
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "cpp",
+    callback = function()
+	vim.bo.shiftwidth = 2
+	vim.bo.softtabstop = 2
+	vim.bo.tabstop = 2
+    end,
+})
 

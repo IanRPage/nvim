@@ -1,6 +1,7 @@
 return {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = true,
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
     keys = {
         { "<space>f", "<cmd>Telescope find_files<cr>" },
         { "<space>g", "<cmd>Telescope live_grep<cr>" },
@@ -8,6 +9,7 @@ return {
         { "<space>h", "<cmd>Telescope help_tags<cr>" },
         { "<space>s", "<cmd>Telescope lsp_document_symbols<cr>" },
 	{ "<space>e", "<cmd>Telescope file_browser<cr>" },
+	-- { "<space>d", "<cmd>Telescope diagnostics<cr>" },  -- open diagnostics floating window
     },
     opts = {
 	extensions = {

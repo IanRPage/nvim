@@ -24,12 +24,13 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
     -- load plugins if not in vscode. will override for plugins I want to load in vscode
-    defaults = { cond = not vim.g.vscode },
+    -- defaults = { cond = not vim.g.vscode },
 
     spec = {
         -- import plugins inside "plugins/" directory
         { import = "plugins" },
 	{ import = "plugins.lsp" },
+	{ import = "plugins.dap" },
     },
 
     -- automatically check for plugin updates
