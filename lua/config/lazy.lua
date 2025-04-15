@@ -29,7 +29,7 @@ require("lazy").setup({
     spec = {
         -- import plugins inside "plugins/" directory
         { import = "plugins" },
-	{ import = "plugins.lsp" },
+	{ import  = "plugins.mason" },
 	{ import = "plugins.dap" },
     },
 
