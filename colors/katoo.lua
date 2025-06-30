@@ -1,5 +1,5 @@
 -- Name:         katoo
--- Description:  Soft, colorful colorscheme with light and dark variants based on terminal colors
+-- Description:  Soft, colorscheme with light and dark variants based on terminal colors
 -- Author:       ipragmatic <ipragmatic2r@gmail.com>
 -- Maintainer:   ipragmatic <ipragmatic2r@gmail.com>
 -- License:      GPL-3.0
@@ -200,7 +200,7 @@ local hlgroups = {
   ErrorMsg = { fg = c_scarlet },
   FoldColumn = { fg = c_steel },
   Folded = { fg = c_steel, bg = c_ocean },
-  FloatBorder = { fg = c_smoke, bg = c_ocean },
+  FloatBorder = { fg = c_smoke, bg = nil },
   FloatShadow = { bg = c_shadow, blend = 70 },
   FloatShadowThrough = { link = 'None' },
   HealthSuccess = { fg = c_tea },
@@ -575,11 +575,11 @@ local hlgroups = {
 
   -- telescope
   TelescopeNormal = { link = 'NormalFloat' },
-  TelescopePromptNormal = { bg = c_deepsea },
+  TelescopePromptNormal = { bg = nil },
   TelescopeTitle = { fg = c_space, bg = c_turquoise, bold = true },
   TelescopePromptTitle = { fg = c_space, bg = c_yellow, bold = true, },
-  TelescopeBorder = { fg = c_smoke, bg = c_ocean },
-  TelescopePromptBorder = { fg = c_smoke, bg = c_deepsea },
+  TelescopeBorder = { fg = c_smoke, bg = nil },
+  TelescopePromptBorder = { fg = c_smoke, bg = nil },
   TelescopeSelection = { fg = c_smoke, bg = c_thunder },
   TelescopeMultiIcon = { fg = c_pigeon, bold = true },
   TelescopeMultiSelection = { bg = c_thunder, bold = true },
@@ -725,6 +725,7 @@ local hlgroups = {
   LazyButton = { bg = c_ocean },
   LazyButtonActive = { bg = c_thunder, bold = true },
   LazyH1 = { fg = c_space, bg = c_yellow, bold = true },
+	-- LazyBoarder = { link = 'TelescopeBorder' },
 
   -- copilot.lua
   CopilotSuggestion = { fg = c_steel, italic = true },
