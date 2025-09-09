@@ -13,7 +13,7 @@ vim.o.textwidth = 80
 vim.o.pumheight = 10
 vim.cmd("colorscheme katoo")
 
--- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, default
+-- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, katoo, default
 -- local schemes = { "cockatoo", "default", "my-darkblue", "my-zaibatsu" }
 --
 -- -- uncomment below to implement random colorscheme from `schemes`

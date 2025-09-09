@@ -21,7 +21,15 @@ return {
         lsp_config.pylsp.setup {}
         lsp_config.ruff.setup {}
         lsp_config.rust_analyzer.setup {}
-	lsp_config.clangd.setup {}
+	require('lspconfig').clangd.setup{
+	    cmd = {
+		"clangd",
+		"--compile-commands-dir=build",
+		"--background-index",
+		"--clang-tidy"
+	    },
+	}
+
 	lsp_config.cssls.setup {
 	    on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
