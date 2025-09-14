@@ -14,6 +14,7 @@ return {
 		"ts_ls",
 		"cssls",
 		"html",
+		"lua_ls",
 	    },
 	}
     end

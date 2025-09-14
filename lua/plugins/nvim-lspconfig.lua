@@ -24,6 +24,7 @@ return {
 	require('lspconfig').clangd.setup{
 	    cmd = {
 		"clangd",
+		"--fallback-style=LLVM",
 		"--compile-commands-dir=build",
 		"--background-index",
 		"--clang-tidy"
