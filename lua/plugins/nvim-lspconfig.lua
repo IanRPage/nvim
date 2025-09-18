@@ -6,8 +6,6 @@ return {
 	"hrsh7th/cmp-nvim-lsp", -- uncomment to enable completion
     },
     config = function()
-	local lsp_config = require("lspconfig")
-
 	vim.keymap.set({"n", "x"}, "<A-F>", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
         vim.keymap.set("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 
@@ -18,30 +16,39 @@ return {
         vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 
 	-- specifying which language servers are implemented/setup
-        lsp_config.pylsp.setup {}
-        lsp_config.ruff.setup {}
-        lsp_config.rust_analyzer.setup {}
-	lsp_config.clangd.setup {}
-	lsp_config.cssls.setup {
+	local lsp_config = vim.lsp.config
+        lsp_config.pylsp = {}
+        lsp_config.ruff = {}
+        lsp_config.rust_analyzer = {}
+	lsp_config.clangd = {
+	    cmd = {
+		"clangd",
+		"--fallback-style=Google",
+		"--compile-commands-dir=build",
+		"--background-index",
+		"--clang-tidy"
+	    },
+	}
+	lsp_config.cssls = {
 	    on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	    end
 	}
-	lsp_config.html.setup {
+	lsp_config.html = {
 	    on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	    end
 	}
-	lsp_config.ts_ls.setup {
+	lsp_config.ts_ls = {
 	    on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	    end
 	}
-	lsp_config.lua_ls.setup {
+	lsp_config.lua_ls = {
 	    settings = {
 		Lua = {
 		    format = {
-			enable = false
+			enable = true,
 			-- for some reason the below settings don't change how lua language server
 			-- formats code. it does an ugly 2 tab indentation
 			-- defaultConfig = {

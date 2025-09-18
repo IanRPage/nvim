@@ -9,11 +9,11 @@ vim.o.termguicolors = true -- nvim terminal adjusts to my normal terminal color 
 vim.o.hlsearch = true
 vim.o.linebreak = true
 vim.o.showbreak = "↪ "
-vim.o.textwidth = 100
+vim.o.textwidth = 80
 vim.o.pumheight = 10
-vim.cmd("colorscheme cockatoo")
+vim.cmd("colorscheme katoo")
 
--- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, default
+-- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, katoo, default
 -- local schemes = { "cockatoo", "default", "my-darkblue", "my-zaibatsu" }
 --
 -- -- uncomment below to implement random colorscheme from `schemes`

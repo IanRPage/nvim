@@ -7,7 +7,7 @@ return {
     },
     config = function()
 	require("mason-null-ls").setup {
-	    ensure_installed = { "clang_format", "prettier" },
+	    ensure_installed = { "clang_format" },
 	}
     end,
 }

@@ -16,9 +16,23 @@ return {
 
 	dap.adapters.lldb = {
 	    type = 'executable',
-	    command = '/usr/bin/lldb-vscode',  -- Adjust path if necessary
+	    command = '/usr/bin/lldb-dap',
 	    name = "lldb"
 	}
+
+	dap.configurations.cpp = {
+	    {
+		name = 'Launch',
+		type = 'lldb',
+		request = 'launch',
+		program = function()
+		    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+		end,
+		cwd = '${workspaceFolder}',
+		stopOnEntry = false,
+		args = {},
+	    },
+	}	
 
 	dap.configurations.rust = {
 	    {

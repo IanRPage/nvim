@@ -33,6 +33,10 @@ require("lazy").setup({
 	{ import = "plugins.dap" },
     },
 
+    ui = {
+	border = "single",
+    },
+
     -- automatically check for plugin updates
     checker = { enabled = true },
 })
