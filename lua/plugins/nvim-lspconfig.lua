@@ -29,21 +29,6 @@ return {
 		"--clang-tidy"
 	    },
 	}
-	lsp_config.cssls = {
-	    on_attach = function(client, bufnr)
-		client.server_capabilities.documentFormattingProvider = false
-	    end
-	}
-	lsp_config.html = {
-	    on_attach = function(client, bufnr)
-		client.server_capabilities.documentFormattingProvider = false
-	    end
-	}
-	lsp_config.ts_ls = {
-	    on_attach = function(client, bufnr)
-		client.server_capabilities.documentFormattingProvider = false
-	    end
-	}
 	lsp_config.lua_ls = {
 	    settings = {
 		Lua = {

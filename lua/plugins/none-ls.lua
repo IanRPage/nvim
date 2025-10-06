@@ -9,7 +9,6 @@ return {
 
 	null_ls.setup({
 	  sources = {
-	    null_ls.builtins.formatting.prettier,
 	    null_ls.builtins.formatting.clang_format.with({
 	      filetypes = { "cpp", "c", "hpp", "h", "objc", "objcpp" },
 	      extra_args = {
