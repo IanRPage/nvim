@@ -7,7 +7,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     -- dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     config = function()
-	require("nvim-treesitter.configs").setup {
+	require("nvim-treesitter").setup {
 	    indent = { enable = true },
 	    ensure_installed = {
 		"rust",
