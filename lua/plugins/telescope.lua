@@ -9,7 +9,7 @@ return {
         { "<space>h", "<cmd>Telescope help_tags<cr>" },
         { "<space>s", "<cmd>Telescope lsp_document_symbols<cr>" },
 	{ "<space>e", "<cmd>Telescope file_browser<cr>" },
-	-- { "<space>d", "<cmd>Telescope diagnostics<cr>" },  -- open diagnostics floating window
+	{ "<space>d", "<cmd>Telescope diagnostics<cr>" },  -- open diagnostics floating window
     },
     opts = {
 	extensions = {
