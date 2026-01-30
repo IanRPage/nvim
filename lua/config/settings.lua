@@ -1,11 +1,11 @@
-vim.o.relativenumber = true 
+vim.o.relativenumber = true
 vim.o.autoindent = true
 vim.o.shiftwidth = 4
 vim.o.smartindent = true
 vim.o.softtabstop = 4
 vim.o.termguicolors = true -- nvim terminal adjusts to my normal terminal color scheme, but it then
-                           -- changes my nvim editor color scheme as well. I don't want to change 
-			   -- editor scheme.
+-- changes my nvim editor color scheme as well. I don't want to change
+-- editor scheme.
 vim.o.hlsearch = true
 vim.o.linebreak = true
 vim.o.showbreak = "↪ "
@@ -22,18 +22,17 @@ vim.cmd("colorscheme katoo")
 -- vim.cmd("colorscheme " .. selected_scheme)
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = {
-	"cpp",
-	"html",
-	"typescript",
-	"javascript",
-	"typescriptreact",
-	"javascriptreact"
-    },
-    callback = function()
-	vim.bo.shiftwidth = 2
-	vim.bo.softtabstop = 2
-	vim.bo.tabstop = 2
-    end,
+  pattern = {
+    "cpp",
+    "html",
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact"
+  },
+  callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+    vim.bo.tabstop = 2
+  end,
 })
-

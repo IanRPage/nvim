@@ -1,17 +1,17 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-	    { out, "WarningMsg" },
-            { "\nPress any key to exit..." },
-        }, true, {})
-	vim.fn.getchar()
-        os.exit(1)
-    end
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out,                            "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -23,20 +23,20 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-    -- load plugins if not in vscode. will override for plugins I want to load in vscode
-    -- defaults = { cond = not vim.g.vscode },
+  -- load plugins if not in vscode. will override for plugins I want to load in vscode
+  -- defaults = { cond = not vim.g.vscode },
 
-    spec = {
-        -- import plugins inside "plugins/" directory
-        { import = "plugins" },
-	{ import  = "plugins.mason" },
-	{ import = "plugins.dap" },
-    },
+  spec = {
+    -- import plugins inside "plugins/" directory
+    { import = "plugins" },
+    { import = "plugins.mason" },
+    { import = "plugins.dap" },
+  },
 
-    ui = {
-	border = "single",
-    },
+  ui = {
+    border = "single",
+  },
 
-    -- automatically check for plugin updates
-    checker = { enabled = true },
+  -- automatically check for plugin updates
+  checker = { enabled = true },
 })

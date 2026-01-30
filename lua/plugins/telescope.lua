@@ -1,21 +1,21 @@
 return {
-    "nvim-telescope/telescope.nvim",
-    lazy = true,
-    dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
-    keys = {
-        { "<space>f", "<cmd>Telescope find_files<cr>" },
-        { "<space>g", "<cmd>Telescope live_grep<cr>" },
-        { "<space>b", "<cmd>Telescope buffers<cr>" },
-        { "<space>h", "<cmd>Telescope help_tags<cr>" },
-        { "<space>s", "<cmd>Telescope lsp_document_symbols<cr>" },
-	{ "<space>e", "<cmd>Telescope file_browser<cr>" },
-	{ "<space>d", "<cmd>Telescope diagnostics<cr>" },  -- open diagnostics floating window
+  "nvim-telescope/telescope.nvim",
+  lazy = true,
+  dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
+  keys = {
+    { "<space>f", "<cmd>Telescope find_files<cr>" },
+    { "<space>g", "<cmd>Telescope live_grep<cr>" },
+    { "<space>b", "<cmd>Telescope buffers<cr>" },
+    { "<space>h", "<cmd>Telescope help_tags<cr>" },
+    { "<space>s", "<cmd>Telescope lsp_document_symbols<cr>" },
+    { "<space>e", "<cmd>Telescope file_browser<cr>" },
+    { "<space>d", "<cmd>Telescope diagnostics<cr>" }, -- open diagnostics floating window
+  },
+  opts = {
+    extensions = {
+      file_browser = {
+        git_status = false,
+      },
     },
-    opts = {
-	extensions = {
-	    file_browser = {
-		git_status = false,
-	    },
-	},
-    },
+  },
 }

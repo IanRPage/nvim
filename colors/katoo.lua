@@ -725,7 +725,7 @@ local hlgroups = {
   LazyButton = { bg = c_ocean },
   LazyButtonActive = { bg = c_thunder, bold = true },
   LazyH1 = { fg = c_space, bg = c_yellow, bold = true },
-	-- LazyBoarder = { link = 'TelescopeBorder' },
+  -- LazyBoarder = { link = 'TelescopeBorder' },
 
   -- copilot.lua
   CopilotSuggestion = { fg = c_steel, italic = true },
@@ -783,4 +783,3 @@ end
 -- }}}1
 
 -- vim:ts=2:sw=2:sts=2:fdm=marker:fdl=0
-
