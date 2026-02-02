@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   lazy = true,
   build = function()
-    require("nvim-treesitter.install").update({ with_sync = true })()
+    require("nvim-treesitter.install").update({ with_sync = true })
   end,
   event = { "BufReadPre", "BufNewFile" },
   -- dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
