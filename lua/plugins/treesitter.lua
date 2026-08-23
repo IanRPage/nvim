@@ -25,6 +25,7 @@ return {
         "html",
         "css",
         "bash",
+        "yaml",
       },
       incremental_selection = {
         enable = true,
