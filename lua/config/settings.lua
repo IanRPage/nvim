@@ -11,6 +11,7 @@ vim.o.linebreak = true
 vim.o.showbreak = "↪ "
 vim.o.textwidth = 80
 vim.o.pumheight = 10
+vim.o.mouse = "i"
 vim.cmd("colorscheme katoo")
 
 -- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, katoo, default
