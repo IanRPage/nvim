@@ -12,6 +12,13 @@ vim.o.showbreak = "↪ "
 vim.o.textwidth = 80
 vim.o.pumheight = 10
 vim.o.mouse = "i"
+
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldlevel = 99 -- start with everything unfolded
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
 vim.cmd("colorscheme katoo")
 
 -- -- top colorschemes: my-darkblue, my-zaibatsu, cockatoo, katoo, default
